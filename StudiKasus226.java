@@ -2,14 +2,16 @@ import java.util.Scanner;
 public class StudiKasus226 {
 
     public static void main(String[] args) {
-        // TODO code application logic here
-    }scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
+
+    String nama, jenis;
+
         
     // ===== INPUT DATA UMUM =====
-        System.out.print("Nama mahasiswa : ");
-        String nama = input.nextLine();
+        System.out.println("Nama mahasiswa : "); ;
+        nama = input.nextLine();
         System.out.print("Jenis kegiatan (BELMAWA/BAKORMA/MANDIRI/PKM/LAINNYA) : ");
-        String jenis = input.nextLine();
+        jenis = input.nextLine();
         System.out.print("Jumlah dokumen : ");
         int jumlahDokumen = input.nextInt();
  
@@ -29,6 +31,11 @@ public class StudiKasus226 {
             System.out.print("Status pendanaan PKM (1 = lolos, 0 = tidak lolos) : ");
             statusPKM = input.nextInt();
         }
+
+        // ===== OUTPUT =====
+        System.out.println("\n===== HASIL =====");
+        System.out.println("Nama mahasiswa : " + nama);
+        System.out.println("Jenis kegiatan : " + jenis.toUpperCase());
  
         // ===== PROSES (nested IF, maksimal 3 tingkat) =====
         if (jumlahDokumen < 4) {                                   // tingkat 1
@@ -59,16 +66,6 @@ public class StudiKasus226 {
  
         input.close();
     }
-}
- 
-
-
-
-
-
-
-
-
-
+    
 }
 
